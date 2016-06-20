@@ -1,0 +1,12 @@
+{
+  "todos": [
+    {
+      "id": 1,
+      "name": "Lesson outline"
+    },
+    {
+      "id": 2,
+      "name": "Record video"
+    }
+  ]
+}
