@@ -1,27 +1,44 @@
 var riot = require('riot')
 var redux = require('redux')
-var thunk = require('redux-thunk')
+//var thunk = require('redux-thunk') ダメだった
+var thunk = require('redux-thunk').default
+var createLogger = require('redux-logger')
+
+const logger = createLogger();
 
 require('./tag/todo.tag')
-require('./tag/todo_form.tag')
+require('./tag/todo-list.tag')
+require('./tag/todo-form.tag')
+require('./tag/loding-gif.tag')
 
-var reducer = function(state = {title: 'Default title'}, action) {
-  console.log(action)
+var reducer = function(state = {tasks: []}, action) {
   switch(action.type) {
-    case 'CHANGE_TITLE':
-      // var newState = {title: action.data}
-      // return newState
-      return Object.assign({}, state, {title: action.data})
+    case 'TASKS_LOADED':
+      return Object.assign({}, state, {tasks: action.data})
+    case 'TOGGLE_LOADING':
+      return Object.assign({}, state, {isLoading: action.data})
+    case 'TASK_ADDED':
+      return Object.assign({}, state, {tasks: state.tasks.concat(action.data)})
+    case 'TASK_COMPLETION_CHANGED':
+        var taskIndex = state.tasks.findIndex(function(task){
+          return task.id == action.data.id
+        })
+        var newTasks = [
+          ...state.tasks.slice(0,taskIndex),
+          Object.assign({},state.tasks[taskIndex],{isComplete:action.data.isComplete}),
+          ...state.tasks.slice(taskIndex+1)
+        ]
+        return Object.assign({},state,{tasks:newTasks})
     default:
       return state
   }
 }
 
 var createStoreWithMiddleware = redux.compose(
-  redux.applyMiddleware(thunk)
+  redux.applyMiddleware(thunk, logger)
 )(redux.createStore)
 
-var reduxStore = redux.createStore(reducer)
+var reduxStore = createStoreWithMiddleware(reducer)
 
 document.addEventListener('DOMContentLoaded', () => {
   riot.mount('*', {store:reduxStore})
