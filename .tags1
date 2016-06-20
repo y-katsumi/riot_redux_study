@@ -4,4 +4,28 @@
 !_TAG_PROGRAM_NAME	Exuberant Ctags	//
 !_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
 !_TAG_PROGRAM_VERSION	5.8	//
-riot_redux_study	/Users/katsumiyukihiro/my/main/src/riot_redux_study/README.md	/^# riot_redux_study$/;"	function	line:1
+module.exports.loadTasks	/Users/katsumiyukihiro/my/main/src/riot_redux_study/src/actions.js	/^module.exports = {$/;"	property	line:1
+module.exports.addTask	/Users/katsumiyukihiro/my/main/src/riot_redux_study/src/actions.js	/^  loadTasks: loadTasks,$/;"	property	line:2
+module.exports.toggleComplete	/Users/katsumiyukihiro/my/main/src/riot_redux_study/src/actions.js	/^  addTask: addTask,$/;"	property	line:3
+module.exports.hideError	/Users/katsumiyukihiro/my/main/src/riot_redux_study/src/actions.js	/^  toggleComplete: toggleComplete,$/;"	property	line:4
+loadTasks	/Users/katsumiyukihiro/my/main/src/riot_redux_study/src/actions.js	/^function loadTasks(){$/;"	function	line:8
+onload	/Users/katsumiyukihiro/my/main/src/riot_redux_study/src/actions.js	/^    request.onload = function(){$/;"	function	line:13
+setTimeout	/Users/katsumiyukihiro/my/main/src/riot_redux_study/src/actions.js	/^    setTimeout(function(){$/;"	function	line:20
+request.open.onload	/Users/katsumiyukihiro/my/main/src/riot_redux_study/src/actions.js	/^    var request = new XMLHttpRequest();$/;"	function	line:11
+loadTasks	/Users/katsumiyukihiro/my/main/src/riot_redux_study/src/actions.js	/^function loadTasks(){$/;"	function	line:8
+tasksloaded	/Users/katsumiyukihiro/my/main/src/riot_redux_study/src/actions.js	/^function tasksloaded(tasks){$/;"	function	line:26
+tasksloaded	/Users/katsumiyukihiro/my/main/src/riot_redux_study/src/actions.js	/^function tasksloaded(tasks){$/;"	function	line:26
+toggleLoading	/Users/katsumiyukihiro/my/main/src/riot_redux_study/src/actions.js	/^function toggleLoading(isLoading){$/;"	function	line:30
+toggleLoading	/Users/katsumiyukihiro/my/main/src/riot_redux_study/src/actions.js	/^function toggleLoading(isLoading){$/;"	function	line:30
+addTask	/Users/katsumiyukihiro/my/main/src/riot_redux_study/src/actions.js	/^function addTask(newTask){$/;"	function	line:34
+onload	/Users/katsumiyukihiro/my/main/src/riot_redux_study/src/actions.js	/^    request.onload = function(){$/;"	function	line:40
+addTask	/Users/katsumiyukihiro/my/main/src/riot_redux_study/src/actions.js	/^function addTask(newTask){$/;"	function	line:34
+newTaskAdded	/Users/katsumiyukihiro/my/main/src/riot_redux_study/src/actions.js	/^function newTaskAdded(id, name){$/;"	function	line:50
+newTaskAdded	/Users/katsumiyukihiro/my/main/src/riot_redux_study/src/actions.js	/^function newTaskAdded(id, name){$/;"	function	line:50
+toggleComplete	/Users/katsumiyukihiro/my/main/src/riot_redux_study/src/actions.js	/^function toggleComplete(id, isComplete){$/;"	function	line:53
+onload	/Users/katsumiyukihiro/my/main/src/riot_redux_study/src/actions.js	/^    request.onload = function(){$/;"	function	line:58
+completeChanged	/Users/katsumiyukihiro/my/main/src/riot_redux_study/src/actions.js	/^function completeChanged(id, isComplete){$/;"	function	line:72
+showError	/Users/katsumiyukihiro/my/main/src/riot_redux_study/src/actions.js	/^function showError(message){$/;"	function	line:82
+hideError	/Users/katsumiyukihiro/my/main/src/riot_redux_study/src/actions.js	/^function hideError(){$/;"	function	line:89
+tempErrorMessage	/Users/katsumiyukihiro/my/main/src/riot_redux_study/src/actions.js	/^function tempErrorMessage(message){$/;"	function	line:93
+setTimeout	/Users/katsumiyukihiro/my/main/src/riot_redux_study/src/actions.js	/^    setTimeout(function(){$/;"	function	line:96

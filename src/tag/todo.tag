@@ -1,4 +1,5 @@
 <todo>
+  <error-message message={this.state.errorMessage} iserror={this.state.isError} hide={hideErrorMessage}></error-message>
   <loding-gif loding="{this.state.isLoading}"></loding-gif>
   <todo-form addtask={this.handlNewTask}></todo-form>
   <todo-list tasks={this.state.tasks} handlecheck={handleTaskCompletionChange}></todo-list>

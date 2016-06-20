@@ -2,6 +2,7 @@ module.exports = {
   loadTasks: loadTasks,
   addTask: addTask,
   toggleComplete: toggleComplete,
+  hideError: hideError
 }
 
 function loadTasks(){
@@ -56,6 +57,7 @@ function toggleComplete(id, isComplete){
     request.setRequestHeader("Content-Type","application/json")
     request.onload = function(){
       if (request.status >= 200 && request.status < 400) {
+      // if (false) {
         dispatch(completeChanged(id, isComplete))
       } else {
         dispatch(completeChanged(id, !isComplete))
@@ -74,5 +76,25 @@ function completeChanged(id, isComplete){
       id: id,
       isComplete: isComplete
     }
+  }
+}
+
+function showError(message){
+  return{
+    type: 'SHOW_ERROR',
+    data: message
+  }
+}
+
+function hideError(){
+  return { type: 'HIDE_ERROR' }
+}
+
+function tempErrorMessage(message){
+  return function(dispatch, getState){
+    dispatch(showError(message))
+    setTimeout(function(){
+      // dispatch(hideError())
+    }, 1000)
   }
 }
