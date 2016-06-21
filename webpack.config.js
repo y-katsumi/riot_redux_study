@@ -4,7 +4,10 @@ module.exports = {
   entry: './src/index.js',
   output: {
     path: './',
-    filename: 'bundle.js'
+    filename: 'js/bundle.js'
+  },
+  devServer: {
+    contentBase: 'www'
   },
   module: {
     loaders: [
